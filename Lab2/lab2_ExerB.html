@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Course Feedback</title>
+
+    <!-- Table styling -->
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -11,14 +19,14 @@
     <!--
     Error 1 (Line 10): </head> should be </header>
     Error 2 (Line 20): <td>Rating</td> should be <th>Rating</th>
-    Error 3 (Line 26): Missing </tr> closing tag for Week 1 row
-    Error 4 (Line 28): colspan="3" incorrect, should match table structure
-    Error 5 (Line 32): Missing </td> after "Semantic HTML"
-    Error 6 (Line 39): label for="name" does not match input id="fullname"
-    Error 7 (Lines 42-45): Radio buttons use different names; must share one name
-    Error 8 (Line 47): label for="labs" does not match checkbox id="lab"
+    Error 3 (Line 26): Missing </tr> tag
+    Error 4 (Line 28): Incorrect colspan value causing broken table structure
+    Error 5 (Line 32): Missing </td> tag
+    Error 6 (Line 39): Label 'for' value does not match input id
+    Error 7 (Lines 42-45): Radio buttons use different names instead of one group
+    Error 8 (Line 47): Label 'for' value does not match checkbox id
     Error 9 (Line 49): </from> should be </form>
-    Error 10 (Line 52): &copy should be &copy;
+    Error 10 (Line 52): Missing semicolon in &copy;
     -->
 
     <!-- Header Section -->
@@ -39,8 +47,7 @@
     <section id="results">
         <h2>Feedback Summary</h2>
 
-        <table border="1">
-
+        <table>
             <tr>
                 <th>Week</th>
                 <th>Topic</th>
@@ -80,7 +87,6 @@
                 <td colspan="2"><strong>Average Rating</strong></td>
                 <td>4.46</td>
             </tr>
-
         </table>
     </section>
 
@@ -94,7 +100,7 @@
 
             <!-- Name Input -->
             <label for="fullname">Name:</label>
-            <input type="text" id="fullname" name="name">
+            <input type="text" id="fullname" name="fullname">
             <br><br>
 
             <!-- Email Input -->
@@ -102,9 +108,8 @@
             <input type="email" id="email" name="email">
             <br><br>
 
-            <!-- Radio Buttons -->
-            <label>Overall Rating:</label>
-            <br>
+            <!-- Radio Button Group -->
+            <p><strong>Overall Rating:</strong></p>
 
             <input type="radio" id="good" name="rating" value="good">
             <label for="good">Good</label>
@@ -118,18 +123,20 @@
             <br><br>
 
             <!-- Checkbox Group -->
-            <p>Topics I Want More Practice On:</p>
+            <p><strong>Topics I Want More Practice On:</strong></p>
 
-            <input type="checkbox" id="html" name="topic" value="html">
-            <label for="html">HTML Basics</label><br>
-
-            <input type="checkbox" id="tables" name="topic" value="tables">
-            <label for="tables">Tables</label><br>
-
-            <input type="checkbox" id="forms" name="topic" value="forms">
-            <label for="forms">Forms</label><br>
-
+            <input type="checkbox" id="html" name="topics" value="HTML">
+            <label for="html">HTML Basics</label>
             <br>
+
+            <input type="checkbox" id="tables" name="topics" value="Tables">
+            <label for="tables">Tables</label>
+            <br>
+
+            <input type="checkbox" id="forms" name="topics" value="Forms">
+            <label for="forms">Forms</label>
+
+            <br><br>
 
             <!-- Attendance Checkbox -->
             <input type="checkbox" id="lab" name="lab" value="yes">
@@ -137,13 +144,13 @@
 
             <br><br>
 
-            <!-- Section Selection -->
-            <label for="section">Section / Group:</label>
+            <!-- Select Menu -->
+            <label for="sectiongroup">Section / Group:</label>
 
-            <select id="section" name="section">
-                <option value="group1">Group 1</option>
-                <option value="group2">Group 2</option>
-                <option value="group3">Group 3</option>
+            <select id="sectiongroup" name="sectiongroup">
+                <option value="Group1">Group 1</option>
+                <option value="Group2">Group 2</option>
+                <option value="Group3">Group 3</option>
             </select>
 
             <br><br>
@@ -163,8 +170,8 @@
         <article>
             <h3>Ali</h3>
             <p>
-                The lessons were easy to follow and the lab exercises helped
-                me understand HTML better.
+                The lectures and lab sessions were very useful.
+                The practical exercises helped me understand HTML concepts.
             </p>
         </article>
 
@@ -172,8 +179,8 @@
         <article>
             <h3>Siti</h3>
             <p>
-                I enjoyed learning about forms and semantic HTML.
-                More practical exercises would be helpful.
+                The course was interesting and well organized.
+                More examples on forms and tables would be helpful.
             </p>
         </article>
 
@@ -187,5 +194,4 @@
     </footer>
 
 </body>
-
 </html>
