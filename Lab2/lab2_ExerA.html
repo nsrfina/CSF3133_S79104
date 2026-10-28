@@ -38,10 +38,10 @@
 
         <!-- Speaker Article -->
         <article>
-            <h3>Guest Speaker: Dr. Nik D'Aisyah Rahman</h3>
+            <h3>Guest Speaker: Dr. Aisyah Rahman</h3>
             <p>
-                Dr. Nik D'Aisyah Rahman is a senior software engineer with extensive
-                incredible experience in web development and artificial intelligence.
+                Dr. Aisyah Rahman is a senior software engineer with extensive
+                experience in web development and artificial intelligence.
                 She will share insights on current trends in technology.
             </p>
         </article>
@@ -105,4 +105,96 @@
             <tr>
                 <td>2:00 PM - 4:00 PM</td>
                 <td>Coding Competition</td>
-                <
+                <td>Computer Lab 2</td>
+                <td>Competition Committee</td>
+            </tr>
+
+            <tr>
+                <td>4:00 PM - 5:00 PM</td>
+                <td>Closing Ceremony and Prize Giving</td>
+                <td>Faculty Hall</td>
+                <td>Event Director</td>
+            </tr>
+        </table>
+    </section>
+
+    <hr>
+
+    <!-- Registration Section -->
+    <section id="register">
+        <h2>Registration Form</h2>
+
+        <form action="register.html" method="post">
+
+            <!-- Personal Information -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname">
+            <br><br>
+
+            <label for="matric">Matric Number:</label>
+            <input type="text" id="matric" name="matric">
+            <br><br>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+
+            <!-- Year of Study -->
+            <p><strong>Year of Study</strong></p>
+
+            <input type="radio" id="year1" name="year" value="Year 1">
+            <label for="year1">Year 1</label>
+
+            <input type="radio" id="year2" name="year" value="Year 2">
+            <label for="year2">Year 2</label>
+
+            <input type="radio" id="year3" name="year" value="Year 3">
+            <label for="year3">Year 3</label>
+
+            <input type="radio" id="year4" name="year" value="Year 4">
+            <label for="year4">Year 4</label>
+
+            <br><br>
+
+            <!-- Session Selection -->
+            <p><strong>Sessions to Join</strong></p>
+
+            <input type="checkbox" id="speech" name="session" value="Speech">
+            <label for="speech">Keynote Speech</label><br>
+
+            <input type="checkbox" id="workshop" name="session" value="Workshop">
+            <label for="workshop">Programming Workshop</label><br>
+
+            <input type="checkbox" id="competition" name="session" value="Competition">
+            <label for="competition">Coding Competition</label>
+
+            <br><br>
+
+            <!-- Programme Selection -->
+            <label for="programme">Programme:</label>
+
+            <select id="programme" name="programme">
+                <option value="cs">Computer Science</option>
+                <option value="it">Information Technology</option>
+                <option value="se">Software Engineering</option>
+                <option value="ds">Data Science</option>
+            </select>
+
+            <br><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Register">
+
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Organised by Faculty of Computer Science and Mathematics</p>
+        <p>&copy; 2026 Programming Workshop. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
