@@ -1,1 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Study Crumbs</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #faf7fc;
+    color: #444;
+}
+/* ===================================== */
+/* DIV 1 : HEADER */
+/* ===================================== */
+#header{
+    background-color: #e6d8f5;
+    text-align: center;
+    padding: 25px;
+}
+/* ===================================== */
+/* DIV 2 : NAVIGATION */
+/* ===================================== */
+#nav{
+    background-color: #d9f1ee;
+    text-align: center;
+    padding: 12px;
+}
+#nav a{
+    text-decoration: none;
+    color: #5a4c69;
+    margin: 15px;
+    font-weight: bold;
+}
+/* ===================================== */
+/* DIV 3 : CONTENT */
+/* ===================================== */
+#content{
+    width: 70%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: white;
+}
+/* ===================================== */
+/* DIV 4 : SIDEBAR */
+/* ===================================== */
+#sidebar{
+    width: 30%;
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fdeff6;
+}
+/* ===================================== */
+/* DIV 5 : FOOTER */
+/* ===================================== */
+#footer{
+    clear: both;
+    background-color: #e6d8f5;
+    text-align: center;
+    padding: 15px;
+}
+fieldset{
+    margin-bottom: 15px;
+    border: 2px solid #d9c6f0;
+}
+legend{
+    font-weight: bold;
+    color: #6b5b7b;
+}
+label{
+    display: block;
+    margin-top: 10px;
+}
+input{
+    margin-top: 5px;
+}
+output{
+    font-weight: bold;
+    color: #cc3366;
+}
+</style>
+<script>
+function calculateTotal()
+{
+    let cupcake =
+        parseInt(document.getElementById("cupcake").value) || 0;
+    let cakeSlice =
+        parseInt(document.getElementById("cakeslice").value) || 0;
+    let total =
+        (cupcake * 3) +
+        (cakeSlice * 5);
+    document.getElementById("totalPrice").value =
+        "RM " + total;
+}
+</script>
+</head>
+<body>
+<!-- ================================================= -->
+<!-- TASK: HEADER DIV                                  -->
+<!-- ================================================= -->
+<div id="header">
+    <!-- Inline Element: span -->
+    <h1>Daily <span>Study Crumbs</span> &reg;</h1>
+    <p>
+        Fresh snacks and desserts prepared to support
+        productive study sessions, group discussions and
+        campus activities.
+    </p>
+</div>
+<!-- ================================================= -->
+<!-- TASK: NAVIGATION DIV                              -->
+<!-- ================================================= -->
+<div id="nav">
+    <!-- Inline Element: a -->
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">Order Form</a>
+    <a href="#">Contact</a>
+</div>
+<!-- ================================================= -->
+<!-- TASK: CONTENT DIV                                 -->
+<!-- ================================================= -->
+<div id="content">
+    <!-- Block Element: h2 -->
+    <h2>Online Snack Order Form</h2>
+    <!-- Inline Element: strong -->
+    <p>
+        <strong>Daily Study Crumbs</strong> offers a variety
+        of snacks and desserts for students who need a quick
+        refreshment during classes, assignments and revision
+        sessions.
+    </p>
+    <!-- Inline Element: em -->
+    <p>
+        Popular items include <em>cupcakes</em>,
+        cake slices and other baked goods prepared daily.
+    </p>
+    <!-- ================================================= -->
+    <!-- TASK: HTML ENTITIES                               -->
+    <!-- ================================================= -->
+    <h2>Information</h2>
+    <p>Registered Trademark: &reg;</p>
+    <p>Copyright: &copy; 2026 Daily Study Crumbs</p>
+    <p>HTML Symbols: &lt;form&gt; and &lt;output&gt;</p>
+    <p>Currency Examples: &pound;5 and &euro;7</p>
+    <p>Welcome&nbsp;Students!</p>
+    <!-- ================================================= -->
+    <!-- TASK: HTML5 FORM ELEMENTS                         -->
+    <!-- ================================================= -->
+    <form>
+        <fieldset>
+            <legend>Customer Information</legend>
+            <!-- HTML5 text -->
+            <label for="name">Full Name:</label>
+            <input type="text"
+                   id="name"
+                   required>
+            <!-- HTML5 tel -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel"
+                   id="phone"
+                   placeholder="012-3456789"
+                   required>
+            <!-- HTML5 email -->
+            <label for="email">Email Address:</label>
+            <input type="email"
+                   id="email"
+                   required>
+            <!-- HTML5 date -->
+            <label for="pickupDate">Pickup Date:</label>
+            <input type="date"
+                   id="pickupDate"
+                   required>
+            <!-- HTML5 time -->
+            <label for="pickupTime">Pickup Time:</label>
+            <input type="time"
+                   id="pickupTime"
+                   required>
+        </fieldset>
+        <fieldset>
+            <legend>Product Selection</legend>
+            <!-- HTML5 datalist -->
+            <label for="snack">Choose a Product:</label>
+            <input list="snackList"
+                   id="snack">
+            <datalist id="snackList">
+                <option value="Chocolate Cupcake">
+                <option value="Vanilla Cupcake">
+                <option value="Red Velvet Cake Slice">
+                <option value="Blueberry Cake Slice">
+            </datalist>
+            <!-- HTML5 color -->
+            <label>Preferred Packaging Colour:</label>
+            <input type="color">
+            <!-- HTML5 range -->
+            <label>Expected Satisfaction Level:</label>
+            <input type="range"
+                   min="1"
+                   max="10">
+        </fieldset>
+        <!-- ================================================= -->
+        <!-- TASK: OUTPUT CALCULATOR                           -->
+        <!-- Cupcake = RM3                                     -->
+        <!-- Cake Slice = RM5                                  -->
+        <!-- ================================================= -->
+        <fieldset>
+            <legend>Order Calculator</legend>
+            <label>
+                Number of Cupcakes (RM3 each)
+            </label>
+            <input type="number"
+                   id="cupcake"
+                   value="0"
+                   min="0"
+                   oninput="calculateTotal()">
+            <label>
+                Number of Cake Slices (RM5 each)
+            </label>
+            <input type="number"
+                   id="cakeslice"
+                   value="0"
+                   min="0"
+                   oninput="calculateTotal()">
+            <br><br>
+            Total Amount:
+            <!-- Required Output Element -->
+            <output id="totalPrice">
+                RM 0
+            </output>
+        </fieldset>
+        <!-- HTML5 Submit Button -->
+        <input type="submit"
+               value="Submit Order">
+    </form>
+</div>
+<!-- ================================================= -->
+<!-- TASK: SIDEBAR DIV                                 -->
+<!-- ================================================= -->
+<div id="sidebar">
+    <h2>Popular Choices</h2>
+    <!-- Block Element: ul -->
+    <ul>
+        <li>Chocolate Cupcake</li>
+        <li>Vanilla Cupcake</li>
+        <li>Red Velvet Cake Slice</li>
+    </ul>
+    <p>
+        These items are among the most frequently selected
+        by students during revision weeks and project
+        discussions.
+    </p>
+    <p>
+        Visit our
+        <a href="#">customer information page</a>
+        for additional updates.
+    </p>
+</div>
+<!-- ================================================= -->
+<!-- TASK: FOOTER DIV                                  -->
+<!-- ================================================= -->
+<div id="footer">
+    <p>
+        &copy; 2026 Daily Study Crumbs.
+        All Rights Reserved.
+    </p>
+</div>
 
+</body>
+</html>
