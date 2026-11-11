@@ -100,8 +100,8 @@ h2{
 /* Video Styling */
 
 video{
-    width: 90%;
-    max-width: 100%;
+    width: 60%;
+    max-width: 80%;
     height: auto;
     display: block;
     margin: 20px aut*;
