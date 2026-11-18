@@ -1,0 +1,127 @@
+/* General Page */
+
+body {
+    margin: 0;
+    font-family: Garamond, sans-serif;
+    background-color: #EFE6D8;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background-image: url("header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    padding: 75px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.3rem;
+    font-family: 'Courgette', cursive;
+}
+
+header p {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 0.9rem;
+}
+
+/* Navigation */
+
+nav {
+    background-color: #2C2C2C;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 16px;
+    font-size: 0.85rem;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: #E67E22;
+}
+
+/* Main Content */
+
+main {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+}
+
+section p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Table */
+
+#menuTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#menuTable th {
+    background-color: #E67E22;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+#menuTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#menuTable tr:nth-child(even) {
+    background-color: #FDEBD0;
+}
+
+#menuTable tr:nth-child(odd) {
+    background-color: #FEF6E8;
+}
+
+#menuTable tr:hover {
+    background-color: #F6D6A8;
+}
+
+#menuTable td:last-child {
+    text-align: right;
+}
+
+/* Footer */
+
+footer {
+    background-color: #DFDBD0;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8rem;
+    color: #666;
+}
